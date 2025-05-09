@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to the shared CSS file -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Jeep2Go - Forgot Password Verification</title>
+</head>
+<body>
+    <div class="signin-container">
+        <div class="logo-area">
+            <img src="jeep2go-logo-cut.png" alt="Jeep2Go Logo" class="logo-img">
+            <span class="logo-text">Jeep2Go</span>
+        </div>
+
+        <!-- Title -->
+        <h1 class="welcome-text">Forgot Password</h1>
+
+        <div class="form-area">
+            <p class="info-text">
+                We sent a verification code to<br>
+                <strong id="user-contact-info">example@gmail.com</strong>
+            </p>
+            <form action="#" id="forgotPasswordForm">
+                <label for="verification-code" class="input-label">Enter the verification code</label>
+                <div class="code-input-group">
+                    <input type="text" placeholder="______" id="verification-code" name="verification-code" required maxlength="6" pattern="\d{6}" inputmode="numeric" title="Enter the 6-digit code">
+                    <button type="button" class="resend-button" id="resendCodeBtn">Resend Code</button>
+                </div>
+
+                <p class="help-text">
+                    Didn't get the code? <a href="#">Learn more.</a>
+                </p>
+
+                <div class="form-actions-right">
+                    <button type="button" id="next-button">Next</button>
+                </div>
+            </form>
+        </div>
+    </div>
+<script src="scripts/forgotEmail.js"></script>
+
+</body>
+</html>

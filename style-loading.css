@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+  overflow: hidden; /* Prevent scrollbars during animation */
+  font-family: Arial, sans-serif; /* Fallback font */
+  background-color: white; /* Initial background before ball expands */
+}
+
+.ball {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100px; /* Initial size */
+  height: 100px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  /* Animation: name duration timing-function fill-mode */
+  animation: expandBall 1s ease forwards;
+  z-index: 2; /* Behind content */
+  background: linear-gradient(to bottom, #1f2a3a, #285e74); /* Gradient background */
+}
+
+@keyframes expandBall {
+  to {
+    /* Expand to cover screen */
+    width: 300vmax; /* Use viewport units for full coverage */
+    height: 300vmax;
+  }
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  z-index: 3; /* Above ball */
+  opacity: 0; /* Start hidden */
+  /* Animation: name duration timing-function delay fill-mode */
+  animation: showContent 1s ease 1.2s forwards; /* Delay after ball starts expanding */
+}
+
+@keyframes showContent {
+  to {
+    opacity: 1; /* Fade in */
+  }
+}
+
+.logo {
+  width: 310px; /* Adjust size as needed */
+  height: auto; /* Maintain aspect ratio */
+  /* Original height was 200px, setting auto is safer */
+  margin-right: 20px;
+  transform: translateX(-100vw); /* Start off-screen left */
+  /* Combined animation property: name duration timing-function delay fill-mode */
+  /* Run animations sequentially */
+  animation:
+    slideInLeft 1s ease 1.2s forwards,
+    rotateImage 1s ease 4.5s forwards, /* Starts after a pause */
+    rotateBack 1s ease 6s forwards; /* Starts after previous rotation */
+}
+
+
+@keyframes slideInLeft {
+  to {
+    transform: translateX(0); /* Slide to final position */
+  }
+}
+
+@keyframes rotateImage {
+  to {
+    transform: rotate(20deg); /* Rotate slightly */
+  }
+}
+
+@keyframes rotateBack {
+  to {
+    transform: rotate(0deg); /* Rotate back */
+  }
+}
+
+.title {
+  font-size: 3rem; /* Adjust size as needed */
+  font-family: 'Rammetto One', cursive; /* Use the specific font */
+  color: #ABDAEA; /* Text color */
+  transform: translateX(100vw); /* Start off-screen right */
+  /* Animation: name duration timing-function delay fill-mode */
+  animation: slideInRight 1s ease 1.2s forwards; /* Delay matches logo slide */
+}
+
+@keyframes slideInRight {
+  to {
+    transform: translateX(0); /* Slide to final position */
+  }
+}

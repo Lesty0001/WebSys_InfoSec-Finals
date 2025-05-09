@@ -30,15 +30,15 @@ ul{
     display: inline-block;
     padding: 10px 20px;
     text-align: center;
-    text-decoration: none; /* Remove underline */
-    color: white; /* Text color */
-    background-color: #007BFF; /* Button background color */
+    text-decoration: none; 
+    color: white; 
+    background-color: #007BFF;
     border: none;
-    border-radius: 5px; /* Rounded corners */
+    border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
 }
 
 .btn:hover {
-    background-color: #0056b3; /* Darker background on hover */
+    background-color: #0056b3; 
 }

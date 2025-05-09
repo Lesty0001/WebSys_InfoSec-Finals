@@ -3,27 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="signform.css">
-    
-    <title>Sign-In</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Jeep2Go - Sign In</title>
 </head>
 <body>
-    <div>
-        <h1>Logo Placeholder</h1>
-        <h1>Welcome!</h1>
-        <h2>Sign In</h2>
-            <p>with your account</p>
-        <div>
-            <form action="" id="signInForm">
-                <input type="text" placeholder="Email or Phone" id="username" name="username" required maxlength="25"><br><br>
-                <a href="">Forgot Email?</a>
-                <div>
-                    <a href="">Create Account</a>
-                    <button id="submit" onclick="password()">Next</button>
-                </div>
-            </form>
+    <div class="signin-container">
+        <div class="logo-area">
+            <img src="jeep2go-logo-cut.png" alt="Jeep2Go Logo" class="logo-img">
         </div>
-    </div>
+
+        <h1 class="welcome-text">Welcome!</h1>
+
+        <div class="form-area">
+            <h2>Sign In</h2>
+            <p>with your account</p>
+
+            <form action="#" id="signInForm">
+                <input type="text" placeholder="Email or Phone" id="username" name="username" required>
+                <a href="forgotemail.html" class="forgot-link">Forgot Email?</a>
+
+                <div class="form-actions">
+                    <a href="#" id="createAccountLink" class="create-account-link">Create Account</a>
+                    <button type="button" id="next-button">Next</button>
+                </div>
+            </form> 
+        </div> 
+    </div> 
+    <script src="scripts/signinPass.js"></script>
+    <script src="scripts/signIn.js"></script>
 </body>
-<script src="signinPass.js"></script>
 </html>

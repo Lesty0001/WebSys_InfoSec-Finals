@@ -1,0 +1,537 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.signin-container,
+.signup-container {
+    background: linear-gradient(to bottom, #1f2a3a, #285e74);
+    color: #ecf0f1;
+    padding: 40px 30px;
+    border-radius: 15px;
+    width: 100%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.signin-container {
+     max-width: 400px;
+}
+.signup-container {
+     max-width: 500px;
+     margin: 30px auto;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.logo-img {
+    height: 50px;
+    margin-right: 15px;
+}
+
+.logo-text {
+    font-size: 28px;
+    font-weight: 700;
+    color: #81C7D4;
+}
+
+.welcome-text {
+    font-size: 36px;
+    font-weight: 700;
+    color: #ecf0f1;
+    text-align: left;
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+.signing-in-as {
+    font-size: 14px;
+    color: #bdc3c7;
+    margin-bottom: 15px;
+    text-align: left;
+    width: 100%;
+}
+
+.signing-in-as strong,
+.signing-in-as span {
+    color: #ecf0f1;
+    font-weight: 600;
+}
+
+.form-area {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-area h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #ecf0f1;
+    margin-bottom: 5px;
+    text-align: left;
+    width: 100%;
+}
+
+.form-area p {
+    font-size: 14px;
+    color: #bdc3c7;
+    margin-bottom: 25px;
+    text-align: left;
+    width: 100%;
+}
+
+.info-text {
+    font-size: 14px;
+    color: #bdc3c7;
+    margin-bottom: 30px;
+    line-height: 1.5;
+    text-align: left;
+    width: 100%;
+}
+
+.info-text strong {
+    color: #ecf0f1;
+    font-weight: 600;
+}
+
+.input-label {
+    display: block;
+    font-size: 14px;
+    color: #bdc3c7;
+    margin-bottom: 8px;
+    text-align: left;
+    width: 100%;
+}
+
+.help-text {
+    font-size: 13px;
+    color: #bdc3c7;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    text-align: left;
+    width: 100%;
+}
+
+.help-text a {
+    color: #81C7D4;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.help-text a:hover {
+    text-decoration: underline;
+}
+
+#signInForm, #passwordForm, #forgotPasswordForm, #createPasswordForm {
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     align-items: stretch;
+}
+
+.form-area input[type="text"],
+.form-area input[type="email"],
+.form-area input[type="tel"],
+.form-area input[type="password"] {
+    width: 100%;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 25px;
+    background-color: #ffffff;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 15px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    min-width: 0;
+}
+
+.form-area input::placeholder {
+    color: #999;
+}
+
+.password-input-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.password-input-container input[type="password"] {
+    margin-bottom: 0;
+    padding-right: 50px;
+}
+
+.password-input-container input[type="text"] {
+    margin-bottom: 0;
+    padding-right: 50px;
+}
+
+.password-toggle-icon {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #555;
+    font-size: 20px;
+}
+
+.code-input-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.code-input-group input[type="text"] {
+    flex-grow: 1;
+    margin-bottom: 0;
+    text-align: center;
+    letter-spacing: 0.5em;
+}
+
+.forgot-link {
+    display: block;
+    font-size: 14px;
+    color: #81C7D4;
+    text-decoration: none;
+    margin-bottom: 30px;
+    text-align: left;
+    transition: color 0.3s ease;
+    width: 100%;
+}
+
+.forgot-link:hover {
+    color: #a8dadc;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.form-actions-right {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.create-account-link {
+    font-size: 15px;
+    color: #81C7D4;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.create-account-link:hover {
+     color: #a8dadc;
+}
+
+#next-button, #submit-button, #confirm-pw-button {
+    background-color: #81C7D4;
+    color: #2c3e50;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    flex-shrink: 0;
+}
+
+#next-button:hover, #submit-button:hover, #confirm-pw-button:hover {
+    background-color: #a8dadc;
+}
+
+#next-button:active, #submit-button:active, #confirm-pw-button:active {
+    transform: scale(0.98);
+}
+
+.resend-button {
+    background-color: #81C7D4;
+    color: #2c3e50;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    flex-shrink: 0;
+}
+
+.resend-button:hover {
+    background-color: #a8dadc;
+}
+
+.resend-button:active {
+    transform: scale(0.98);
+}
+
+.account-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+    margin-top: 15px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.account-option-button {
+    display: block;
+    background-color: #81C7D4;
+    color: #2c3e50;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.account-option-button:hover {
+    background-color: #a8dadc;
+}
+
+.account-option-button:active {
+    transform: scale(0.98);
+}
+
+.signup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #3f566d;
+}
+
+.back-button {
+    color: #81C7D4;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 5px;
+}
+
+.logo-area-signup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-img-signup {
+    height: 35px;
+    margin-right: 10px;
+}
+
+.logo-text-signup {
+    font-size: 22px;
+    font-weight: 700;
+    color: #81C7D4;
+}
+
+.signup-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #ecf0f1;
+    text-align: left;
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+.signup-form {
+    width: 100%;
+}
+
+.form-section {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #3f566d;
+}
+.form-section:last-of-type {
+    border-bottom: none;
+    margin-bottom: 20px;
+}
+
+.section-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #ecf0f1;
+    margin-bottom: 20px;
+}
+
+.section-subtitle {
+    font-size: 13px;
+    color: #bdc3c7;
+    margin-top: -15px;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    color: #bdc3c7;
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+
+.input-group input[type="text"],
+.input-group input[type="number"],
+.input-group input[type="email"],
+.input-group input[type="tel"],
+.input-group input[type="date"],
+.input-group input[type="password"] {
+    width: 100%;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 25px;
+    background-color: #ffffff;
+    font-size: 15px;
+    color: #333;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+.input-group input:focus {
+     outline: none;
+     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 0 2px rgba(129, 199, 212, 0.5);
+}
+
+.date-input-container {
+    position: relative;
+}
+
+.input-group input[type="date"] {
+   color: #555;
+}
+.input-group input[type="date"]:focus,
+.input-group input[type="date"]:valid {
+   color: #333;
+}
+
+.password-input-container-signup {
+    position: relative;
+    width: 100%;
+}
+
+.password-input-container-signup input[type="password"],
+.password-input-container-signup input[type="text"] {
+    padding-right: 45px;
+}
+
+.password-toggle-icon-signup {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #555;
+    font-size: 18px;
+}
+
+.password-hint {
+    font-size: 12px;
+    color: #bdc3c7;
+    margin-top: 5px;
+    padding-left: 5px;
+    text-align: left;
+    width: 100%;
+}
+#confirmPasswordHint {
+    color: #e74c3c;
+    font-weight: 600;
+}
+
+.file-input-group label {
+    margin-bottom: 8px;
+}
+.file-upload-wrapper {
+    position: relative;
+    background-color: #4a617a;
+    border-radius: 25px;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    overflow: hidden;
+}
+.file-upload-wrapper:hover {
+    background-color: #5a738d;
+}
+
+.file-input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.file-upload-button {
+    color: #ecf0f1;
+    font-weight: 500;
+    font-size: 14px;
+    pointer-events: none;
+}
+.file-upload-button .file-types {
+    font-size: 11px;
+    color: #bdc3c7;
+    margin-left: 5px;
+}
+
+.file-name-display {
+    font-size: 12px;
+    color: #bdc3c7;
+    margin-left: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 50%;
+    pointer-events: none;
+}
+
+.form-actions-center {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+#submit-button {
+     padding: 12px 40px;
+}

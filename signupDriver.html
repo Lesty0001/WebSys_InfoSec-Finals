@@ -3,56 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign-Up Driver</title>
+    <!-- Link to the main CSS file -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Add Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Jeep2Go - Sign Up Driver</title>
 </head>
 <body>
-    <div>
-        <!-- change the Back to an Icon used in Prototype  -->
-        <Button>Back</Button>
-        <h1>Sign-Up</h1>
-        <p>Personal Information</p>
-        <div>
-            <form action="">
-                <!-- personal info code start -->
-                <input type="text" placeholder="Sur Name" id="surName" name="surName" required maxlength="25"><br><br>
-                <input type="text" placeholder="First Name" id="firstName" name="firstName" required maxlength="25"><br><br>
-                <input type="text" placeholder="Middle Name" id="middleName" name="middleName" required maxlength="25"><br><br>
-                <input type="number" placeholder="Age" id="age" name="age" required maxlength="2"><br><br>
-                <input type="text" placeholder="Address" id="address" name="address" required maxlength="50">
-                
-                <p id="bday">Birthday</p>
-                    <input type="date" name="" id="date" required><br><br>
-                
-                    <p id="jeepInfo">Jeepney Information:</p>
-                <label for="driverLicense">Driver License</label><br>
-                    <input type="file" id="driverLicense" name="driverLicense" accept="image/*" required><br><br>
-                
-                <label for="vehicleRegistration">Vehicle Registration</label><br>
-                    <input type="file" id="vehicleRegistration" name="vehicleRegistration" accept="image/*" required><br><br>
-                
-                <label for="plateNum">Plate Number</label><br>
-                    <input type="text" id="plateNum" name="plateNum"required placeholder="Plate Number"><br><br>
-                
-                <label for="maxNumofPass">Maximum of Number Passenger</label><br>
-                    <input type="number" id="numPassenger" name="numPassenger"required placeholder="Maximum No. of Passenger"><br><br>
-                
-                <p id="accountInfor">Account Information</p>
-                <label for="email">Email</label><br>
-                    <input type="text" placeholder="Email" id="email" name="email" required maxlength="50"><br>
-                
-                <label for="">Phone Number</label><br>
-                    <input type="tel" placeholder="Phone Number" id="phoneNumber" name="phoneNumber" required maxlength="15"><br>
-                
-                <label for="password">Password</label><br>
-                    <input type="password" placeholder="Password" id="password" name="password" required maxlength="18" minlength="12"><br>
-                
-                <label for="confirmPassword">Confirm Password</label><br>
-                    <input type="password" placeholder="Confirm Password" id="confirmPassword" name="confirmPassword" required maxlength="18" minlength="12"><br><br>
-                    <div>
-                    <button>Submit</button>
-                </div>
-            </form>
+    <!-- Use the same signup container structure -->
+    <div class="signup-container">
+        
+        <div class="signup-header">
+            <!-- Back button -->
+            <a href="signin.html" class="back-button"><i class="fas fa-chevron-left"></i></a>
+            <div class="logo-area-signup">
+                <img src="jeep2go-logo-cut.png" alt="Jeep2Go Logo" class="logo-img-signup">
+                <span class="logo-text-signup">Jeep2Go</span>
+            </div>
+            <div style="width: 30px;"></div> <!-- Placeholder -->
         </div>
+
+        <h1 class="signup-title">Sign Up</h1> <!-- Title remains 'Sign Up' -->
+
+        <form action="#" id="signupDriverForm" class="signup-form">
+
+            <!-- Personal Information Section (Same as Passenger) -->
+            <section class="form-section">
+                <h2 class="section-title">Personal Information</h2>
+                <div class="input-group">
+                    <label for="surName">Surname</label>
+                    <input type="text" placeholder="Enter your surname" id="surName" name="surName" required maxlength="25">
+                </div>
+                <div class="input-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" placeholder="Enter your first name" id="firstName" name="firstName" required maxlength="25">
+                </div>
+                <div class="input-group">
+                     <label for="middleName">Middle Name</label>
+                     <input type="text" placeholder="Enter your middle name" id="middleName" name="middleName" maxlength="25">
+                 </div>
+                 <div class="input-group">
+                     <label for="age">Age</label>
+                     <input type="number" placeholder="Enter your age" id="age" name="age" required min="18" max="120"> <!-- Min age for driver? -->
+                 </div>
+                 <div class="input-group">
+                     <label for="address">Address</label>
+                     <input type="text" placeholder="Enter your address" id="address" name="address" required maxlength="100">
+                 </div>
+                 <div class="input-group">
+                     <label for="birthdate">Birthday</label>
+                     <div class="date-input-container">
+                        <input type="date" id="birthdate" name="birthdate" required>
+                     </div>
+                 </div>
+            </section>
+
+            <!-- Jeepney Information Section -->
+            <section class="form-section">
+                <h2 class="section-title">Jeepney Information:</h2>
+                 <div class="input-group file-input-group">
+                    <label for="driverLicense">Driver's License</label>
+                    <div class="file-upload-wrapper">
+                        <!-- Mark as required -->
+                        <input type="file" id="driverLicense" name="driverLicense" accept="image/jpeg, image/png" class="file-input" required>
+                        <span class="file-upload-button">Upload Files + <span class="file-types">(Only jpg & Png files)</span></span>
+                        <span class="file-name-display"></span>
+                    </div>
+                </div>
+                 <div class="input-group file-input-group">
+                    <label for="vehicleRegistration">Vehicle Registration</label>
+                     <div class="file-upload-wrapper">
+                        <!-- Mark as required -->
+                        <input type="file" id="vehicleRegistration" name="vehicleRegistration" accept="image/jpeg, image/png" class="file-input" required>
+                        <span class="file-upload-button">Upload Files + <span class="file-types">(Only jpg & Png files)</span></span>
+                        <span class="file-name-display"></span>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="plateNum">Plate Number</label>
+                    <!-- Add pattern for specific format if needed -->
+                    <input type="text" id="plateNum" name="plateNum" required placeholder="e.g., LLL-DDDD" maxlength="8" pattern="[A-Za-z]{3}-?\d{4}">
+                    <!-- Simple pattern: 3 letters, optional hyphen, 4 digits -->
+                </div>
+                <div class="input-group">
+                    <label for="numPassenger">Maximum no. of Passengers</label>
+                    <input type="number" id="numPassenger" name="numPassenger" required placeholder="Enter max capacity" min="1" max="50"> <!-- Example range -->
+                </div>
+            </section>
+
+            <!-- Account Information Section (Same as Passenger) -->
+            <section class="form-section">
+                <h2 class="section-title">Account Information</h2>
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" placeholder="Enter a valid email" id="email" name="email" required maxlength="50">
+                </div>
+                <div class="input-group">
+                    <label for="phoneNumber">Phone Number</label>
+                    <input type="tel" placeholder="Enter your phone number" id="phoneNumber" name="phoneNumber" required maxlength="15">
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <div class="password-input-container-signup">
+                        <input type="password" placeholder="Password" id="password" name="password" required minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}" title="Must contain at least one number, one uppercase, one lowercase letter, one special character, and at least 8 characters">
+                        <span class="password-toggle-icon-signup"><i class="fa-solid fa-eye-slash"></i></span>
+                    </div>
+                    <p class="password-hint">Password must contain uppercase letters, lowercase letters, numbers and special letters</p>
+                </div>
+                <div class="input-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <div class="password-input-container-signup">
+                        <input type="password" placeholder="Re-enter your password" id="confirmPassword" name="confirmPassword" required minlength="8">
+                        <span class="password-toggle-icon-signup"><i class="fa-solid fa-eye-slash"></i></span>
+                    </div>
+                    <p class="password-hint" id="confirmPasswordHint"></p> <!-- For error message -->
+                </div>
+            </section>
+
+            <div class="form-actions-center">
+                <button type="submit" id="submit-button">Submit</button>
+            </div>
+        </form>
     </div>
+
+    <script src="scripts/signUpDriver.js"></script>
 </body>
 </html>
