@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up Passenger</title>
+</head>
+<body>
+    <div>
+        <!-- change the Back to an Icon used in Prototype  -->
+        <button>Back</button>
+        <h1>Sign-Up</h1>
+        <p>Personal Information</p>
+        <div>
+            <form action="">
+                <!-- personal info code start -->
+                <input type="text" placeholder="Sur Name" id="surName" name="surName" required maxlength="25"><br><br>
+                <input type="text" placeholder="First Name" id="firstName" name="firstName" required maxlength="25"><br><br>
+                <input type="text" placeholder="Middle Name" id="middleName" name="middleName" required maxlength="25"><br><br>
+                <input type="number" placeholder="Age" id="age" name="age" required maxlength="2"><br><br>
+                <input type="text" placeholder="Address" id="address" name="address" required maxlength="50">
+                
+                <p id="bday">Birthday</p>
+                    <input type="date" name="" id="date" required><br><br>
+        <!-- div idbox can be use to add the box just like in the prototype -->
+            <div class="idbox">
+                    <p id="identityConfirm">Identity Confirmation:</p>
+                <label for="driverLicense">Valid ID</label><br>
+                    <input type="file" id="validId" name="validId" accept="image/*" required><br><br>
+                
+                <label for="studentId">Student ID</label><br>
+                    <input type="file" id="studentId" name="studentId" accept="image/*" required><br><br>
+                
+                <label for="seniorId">Senior Citezen</label><br>
+                    <input type="file" id="seniorId" name="seniorId" required accept="image/*" ><br><br>
+                
+                <label for="pwdId">Person with Disability ID</label><br>
+                    <input type="file" id="pwdId" name="pwdId"required accept="image/*"><br><br>
+            </div>
+                <p id="accountInfor">Account Information</p>
+                <label for="email">Email</label><br>
+                    <input type="text" placeholder="Email" id="email" name="email" required maxlength="50"><br>
+                
+                <label for="">Phone Number</label><br>
+                    <input type="tel" placeholder="Phone Number" id="phoneNumber" name="phoneNumber" required maxlength="15"><br>
+                
+                <label for="password">Password</label><br>
+                    <input type="password" placeholder="Password" id="password" name="password" required maxlength="18" minlength="12"><br>
+                
+                <label for="confirmPassword">Confirm Password</label><br>
+                    <input type="password" placeholder="Confirm Password" id="confirmPassword" name="confirmPassword" required maxlength="18" minlength="12"><br><br>
+                    <div>
+                    <button>Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

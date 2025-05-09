@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="homePass.css">
+    <title>Passenger Homepage</title>
+</head>
+<body>
+    <p>Goodmorning</p>
+    <p>John Doe</p>
+    <div class="boxContainer">
+        <div class="currentBalBox">
+            <ul>
+                <li><label id="currentBalance" for="currentBalance">Current Balance</label></li>
+                <!-- change the Plus Sign to an Icon used in Prototype  -->
+                <li><button>Plus Sign</button></li>
+            </ul>
+            
+            <p id="currentBal">3,015</p>
+        </div>
+        
+        <div class="currentPtsBox">
+            <label for="totalPoints">Total Points</label>
+            <p id="currentPoints">10.25pts</p>
+        </div>
+        
+    </div>
+    <!-- Image here  -->
+<br>
+    <div class="fromLoc">
+        <labe id="fromlocation">From</label><br>
+        <input type="text" required name="from" id="from">
+    </div>
+
+    <div class="toLoc">
+        <labe id="tolocation">To</label><br>
+        <input type="text" required name="to" id="to">
+    </div>
+
+    <div class="totalPass">
+        <labe id="totalPass">Number of Passenger/s</label><br>
+        <input type="text" required name="totalPass" id="totalPass">
+    </div>
+
+    <button id="findNow">Find Now</button>
+
+    <!-- change name of the Buttons, Use Icon used in prototype  -->
+    <div class="navButtons">
+        <a href="#" id="home" class="btn">Home</a>
+        <a href="#" id="history" class="btn">History</a>
+        <a href="#" id="menu" class="btn">Menu</a>
+    </div>
+</body>
+</html>

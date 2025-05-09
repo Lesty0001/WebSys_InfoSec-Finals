@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up Driver</title>
+</head>
+<body>
+    <div>
+        <!-- change the Back to an Icon used in Prototype  -->
+        <Button>Back</Button>
+        <h1>Sign-Up</h1>
+        <p>Personal Information</p>
+        <div>
+            <form action="">
+                <!-- personal info code start -->
+                <input type="text" placeholder="Sur Name" id="surName" name="surName" required maxlength="25"><br><br>
+                <input type="text" placeholder="First Name" id="firstName" name="firstName" required maxlength="25"><br><br>
+                <input type="text" placeholder="Middle Name" id="middleName" name="middleName" required maxlength="25"><br><br>
+                <input type="number" placeholder="Age" id="age" name="age" required maxlength="2"><br><br>
+                <input type="text" placeholder="Address" id="address" name="address" required maxlength="50">
+                
+                <p id="bday">Birthday</p>
+                    <input type="date" name="" id="date" required><br><br>
+                
+                    <p id="jeepInfo">Jeepney Information:</p>
+                <label for="driverLicense">Driver License</label><br>
+                    <input type="file" id="driverLicense" name="driverLicense" accept="image/*" required><br><br>
+                
+                <label for="vehicleRegistration">Vehicle Registration</label><br>
+                    <input type="file" id="vehicleRegistration" name="vehicleRegistration" accept="image/*" required><br><br>
+                
+                <label for="plateNum">Plate Number</label><br>
+                    <input type="text" id="plateNum" name="plateNum"required placeholder="Plate Number"><br><br>
+                
+                <label for="maxNumofPass">Maximum of Number Passenger</label><br>
+                    <input type="number" id="numPassenger" name="numPassenger"required placeholder="Maximum No. of Passenger"><br><br>
+                
+                <p id="accountInfor">Account Information</p>
+                <label for="email">Email</label><br>
+                    <input type="text" placeholder="Email" id="email" name="email" required maxlength="50"><br>
+                
+                <label for="">Phone Number</label><br>
+                    <input type="tel" placeholder="Phone Number" id="phoneNumber" name="phoneNumber" required maxlength="15"><br>
+                
+                <label for="password">Password</label><br>
+                    <input type="password" placeholder="Password" id="password" name="password" required maxlength="18" minlength="12"><br>
+                
+                <label for="confirmPassword">Confirm Password</label><br>
+                    <input type="password" placeholder="Confirm Password" id="confirmPassword" name="confirmPassword" required maxlength="18" minlength="12"><br><br>
+                    <div>
+                    <button>Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
